@@ -2,6 +2,8 @@ const chai = require("chai");
 const expect = chai.expect;
 const { isFive, isOdd, myRange } = require("../funcs");
 
+// Function should return true if the number will be equivalent to 5 otherwise false
+
 describe("isFive(num)", () => {
   it("should return true if the num is 5 otherwise false", () => {
     const num1 = 5;
@@ -21,6 +23,8 @@ describe("isFive(num)", () => {
   });
 });
 
+// Function will return false if number will be equivalent to even and true if not
+
 describe("isOdd(number)", () => {
   it("should return true if number is odd", () => {
     const num1 = 3;
@@ -36,6 +40,8 @@ describe("isOdd(number)", () => {
     expect(actual3).to.be.true;
   });
 
+  //Function will return false if number will be equivalent to odd and true if not
+
   it("should return false if the num is even", () => {
     const num1 = 4;
     const num2 = 2952;
@@ -50,6 +56,8 @@ describe("isOdd(number)", () => {
     expect(actual3).to.be.false;
   });
 
+  //Function will return error if num wont be a number type for ex.[1,2,3 etc]
+
   it("should throw an error if num is not type of Number", () => {
     const string = "i am a string";
     const object = { i: "am", an: "object" };
@@ -60,6 +68,8 @@ describe("isOdd(number)", () => {
     expect(() => isOdd(array)).to.throw(Error);
   });
 });
+
+//Step value of a fucntion should be equivalent to 1
 
 describe("myRange(min, max, step)", () => {
   context("if step is not provided", () => {
@@ -76,6 +86,8 @@ describe("myRange(min, max, step)", () => {
       expect(actual2).to.eql(expected2);
     });
   });
+
+// Function should return correct array with provided step value
 
   context("if step is provided", () => {
     it("should return the correct array", () => {
